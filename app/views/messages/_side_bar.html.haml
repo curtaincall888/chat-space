@@ -1,0 +1,19 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__user
+      .side-bar__header__user__name
+        kota
+      %ul.side-bar__header__user__icon
+        %li
+          = link_to "#", class: "side-bar__header__user__icon--edit" do
+            = icon('far','edit')
+        %li
+          = link_to "#", class: "side-bar__header__user__icon--setting" do
+            = icon('fas','cog')
+  .side-bar__groups
+    = link_to "#", class: "side-bar__groups__list" do
+      .side-bar__groups__list__name
+        tech camp
+      .side-bar__groups__list__message
+        まだメッセージがありません
+
