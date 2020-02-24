@@ -1,14 +1,14 @@
 .side-bar
   .side-bar__header
     .side-bar__header__user
-      .side-bar__header__user__name
-        kota
+      %h3.side-bar__header__user__name
+        = current_user.name
       %ul.side-bar__header__user__icon
         %li
           = link_to "#", class: "side-bar__header__user__icon--edit" do
             = icon('far','edit')
         %li
-          = link_to "#", class: "side-bar__header__user__icon--setting" do
+          = link_to edit_user_path(current_user), class: "side-bar__header__user__icon--setting" do
             = icon('fas','cog')
   .side-bar__groups
     = link_to "#", class: "side-bar__groups__list" do
