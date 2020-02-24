@@ -46,16 +46,16 @@
       height: calc(100vh - 100px);
       padding: 20px;
       &__list {
-        color: #ffffff;
         text-decoration: none;
         margin-bottom: 40px;
         &__name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: #ffffff;
         }
         &__message {
           font-size: 11px;
-          
+          color: #ffffff;
         }
       }
     }
