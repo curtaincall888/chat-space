@@ -16,18 +16,12 @@
           2020/02/22(wed) 14:38:00
       .main-chat__message-list--1__message
         おはよう！
-    .main-chat__message-list--2
-      .main-chat__message-list--2__data
-        %p.main-chat__message-list--2__data__name
-          kota
-        %p.main-chat__message-list--2__data__date
-          2020/02/22(wed) 14:41:00
-      .main-chat__message-list--2__message
-        今日は夜から雨
+
   .main-chat__footer
-    .main-chat__footer__message-form
-      %input.main-chat__footer__message-form--text{:placeholder => "type a message", :type => "text"}/
-      %label{class: "main-chat__footer__message-form--label"}
-        = icon('far','image')
-        %input{type: "file", class: 'main-chat__footer__message-form--label--img'}
-    %input{:type => "submit",class: "main-chat__footer__send-btn", value: "Send"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main-chat__footer__message', placeholder: 'type a message'
+      .main-chat__footer__mask
+        = f.label :image, class: 'main-chat__footer__mask--label' do 
+          = icon('far','image', class: 'main-chat__footer__mask--label--icon')
+          = f.file_field :image, class: 'main-chat__footer__mask--label--img'
+      = f.submit 'Send', class: 'main-chat__footer__send-btn'

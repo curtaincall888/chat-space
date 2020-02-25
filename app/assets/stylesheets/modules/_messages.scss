@@ -119,27 +119,6 @@
           font-size: 14px;
         }
       }
-      &--2 {
-        padding-top: 46px;
-        margin-left: 40px;
-        &__data {
-          margin-bottom: 12px;
-          display: flex;
-          &__name {
-            color: #333333;
-            font-size: 16px;
-          }
-          &__date {
-            color: #999999;
-            font-size: 12px;
-            margin-left: 5px;
-          }
-        }
-        &__message {
-          color: #434a54;
-          font-size: 14px;
-        }
-      }
     }
     &__footer {
       height: 90px;
@@ -147,37 +126,50 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      &__message-form {
+      // ３つを合わせた部分
+      .new_message {
+        display: flex;
         height: 50px;
         width: 100%;
-        margin-left: 40px;
-        display: flex;
+        margin: auto 40px;
+        align-items: center;
         
-        position: relative;
-        &--text {
+        // テキストの部分
+        .main-chat__footer__message {
+          height: 50px;
           width: 100%;
+          position: relative;
         }
-        &--label {
-          position: absolute;
+        // ラベルの部分
+        .main-chat__footer__mask {
           right: 10px;
           bottom: 10px;
           font-size: 25px;
-          text-decoration: none;
-          cursor: pointer;
-          &--img {
-            display: none;
+          position: absolute;
+          right: 155px;
+          bottom: 30px;
+          .main-chat__footer__mask--label {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            .main-chat__footer__mask--label--icon {
+
+            }
+            .main-chat__footer__mask--label--img {
+              display: none;
+            }
           }
         }
-      }
-      &__send-btn {
-        height: 50px;
-        width: 100px;
-        margin-right: 40px;
-        margin-left: 15px;
-        line-height: 50px;
-        text-align: center;
-        color: #ffffff;
-        background-color: #38aef0;
+        // 送信ボタン
+        .main-chat__footer__send-btn {
+          height: 50px;
+          width: 100px;
+          margin-left: 15px;
+          line-height: 50px;
+          text-align: center;
+          color: #ffffff;
+          background-color: #38aef0;
+        }
       }
     }
   }
