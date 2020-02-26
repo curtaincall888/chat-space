@@ -2,21 +2,13 @@
   .main-chat__header
     .main-chat__header__group
       .main-chat__header__group__name
-        test
+        = @group.name
       .main-chat__header__group__member
         Member : kota
-    = link_to "#", class: "main-chat__header__edit-btn" do
+    = link_to edit_group_path(@group), class: "main-chat__header__edit-btn" do
       Edit
   .main-chat__message-list
-    .main-chat__message-list--1
-      .main-chat__message-list--1__data
-        %p.main-chat__message-list--1__data__name
-          kota
-        %p.main-chat__message-list--1__data__date
-          2020/02/22(wed) 14:38:00
-      .main-chat__message-list--1__message
-        おはよう！
-
+    = render @messages
   .main-chat__footer
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'main-chat__footer__message', placeholder: 'type a message'
