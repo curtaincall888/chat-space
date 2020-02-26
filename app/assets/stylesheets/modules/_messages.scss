@@ -133,30 +133,35 @@
         width: 100%;
         margin: auto 40px;
         align-items: center;
-        
-        // テキストの部分
-        .main-chat__footer__message {
+        .main-chat__footer__set {
           height: 50px;
           width: 100%;
+          display: flex;
+          background-color: red;
           position: relative;
-        }
-        // ラベルの部分
-        .main-chat__footer__mask {
-          right: 10px;
-          bottom: 10px;
-          font-size: 25px;
-          position: absolute;
-          right: 155px;
-          bottom: 30px;
-          .main-chat__footer__mask--label {
-            height: 100%;
+          // テキストの部分
+          .main-chat__footer__message {
+            height: 50px;
             width: 100%;
-            cursor: pointer;
-            .main-chat__footer__mask--label--icon {
+          }
+          // ラベルの部分
+          .main-chat__footer__mask {
+            right: 10px;
+            bottom: 10px;
+            font-size: 25px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            .main-chat__footer__mask--label {
+              height: 100%;
+              width: 100%;
+              cursor: pointer;
+              .main-chat__footer__mask--label--icon {
 
-            }
-            .main-chat__footer__mask--label--img {
-              display: none;
+              }
+              .main-chat__footer__mask--label--img {
+                display: none;
+              }
             }
           }
         }
