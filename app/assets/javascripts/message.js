@@ -1,6 +1,5 @@
 $(function(){
      function buildHTML(message){
-       console.log(message.content);
       if (message.image) {
         var html = 
          `<div class="main-chat__message-list__tag">
@@ -57,7 +56,6 @@ $('#new_message').on('submit', function(e){
        $('.main-chat__message-list').append(html);
        $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});      
        $('form')[0].reset();
-       $('.main-chat__footer__send-btn').prop("disabled",false);
      })
      .fail(function() {
       alert("メッセージ送信に失敗しました");
