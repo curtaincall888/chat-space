@@ -4,7 +4,8 @@
       .main-chat__header__group__name
         = @group.name
       .main-chat__header__group__member
-        = @group.users
+        - @group.users.each do |user|
+          = user.name
     = link_to edit_group_path(@group), class: "main-chat__header__edit-btn" do
       Edit
   .main-chat__message-list
