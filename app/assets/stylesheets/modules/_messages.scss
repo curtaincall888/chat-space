@@ -98,6 +98,7 @@
     }
     &__message-list {
       height: calc(100% - 100px - 90px);
+      overflow: scroll;
       &__tag {
         padding-top: 35px;
         margin-left: 40px;
